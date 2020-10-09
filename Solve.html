@@ -18,12 +18,20 @@
     <link href="themes/prism.css" rel="stylesheet" />
 </head>
 
+<!-- FizzBuzz Background Image -->
+<style>
+    body {
+        background-image: url('jsImages/jsFizzBuzz.png');
+        background-color: #cccccc;
+    }
+</style>
+
 <body>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
         <div class="container">
-            <a class="navbar-brand" href="/Index.html">Challenge Fizz Buzz</a>
+            <a class="navbar-brand" href="/Index.html">Fizz Buzz</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -68,45 +76,46 @@
             </div>
         </div>
 
-        <hr />
+    </div>
 
-        <!--Exercise 3-->
-        <div class="col-lg-12 text-center">
-            <h2 class="mt-5">Exercise 3</h2>
-            <p class="lead">Write a program that accepts two numbers between 1 and 100 from the user: Fizz Buzz</p>
-            <input type="number" id="FizzBuzz" />
+    <hr />
+    <!-- Solve Page Content -->
+    <!--Exercise 3-->
+    <div class="col-lg-12 text-center">
+        <h2 class="mt-5">Exercise 3</h2>
+        <p class="lead">Write a program that accepts two numbers between 1 and 100 from the user: Fizz Buzz</p>
+        <input type="number" id="FizzBuzz" />
 
-            <button onclick="this.innerHTML=Date()">Fizz Buzz</button>
-        </div>
+        <button onclick="this.innerHTML=Date()">Fizz Buzz</button>
+    </div>
+    <hr />
 
-        <hr />
-
-        <!-- Fizz Buzz -->
-        <div class="col-lg-12 text-center">
-            <div class="row">
-                <div class="col">
-                    <input id="txtFizzBuzzIn1" />
-
-                </div>
-
-                <div class="col">
-                    <input id="txtFizzBuzzIn2" />
-
-                </div>
-
-                <div class="col">
-                    <button id="btnFizzBuzz" class="btn btn-danger">Click Me</button>
-                </div>
+    <!-- Fizz Buzz --><!--Exercise 3-->
+    <div class="col-lg-12 text-center">
+        <div class="row">
+            <div class="col">
+                <input id="txtFizzBuzzIn1" />
 
             </div>
-            <div class="row">
-                <p id="pFizzBuzzOut"></p>
+
+            <div class="col">
+                <input id="txtFizzBuzzIn2" />
+
             </div>
+
+            <div class="col">
+                <button id="btnFizzBuzz" class="btn btn-danger">Click Me</button>
+            </div>
+
         </div>
+        <div class="row">
+            <p id="pFizzBuzzOut"></p>
+        </div>
+    </div>
+
 
 
     </div>
-
     <!-- Bootstrap core JavaScript -->
     <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -117,18 +126,21 @@
     <!-- Prism -->
     <pre><code>
     <script>
-        for (let i = 1; i <= 100; i++) {
 
-            let output = "";
-            if (i % 3 == 0) { output += "Fizz"; }
-            if (i % 5 == 0) { output += "Buzz"; }
-            // if ((i % 3 != 0) && (i % 5 != 0)) {}
-            if (output == "") { output = i; }
-
+        //3. Write a program that accepts two numbers between 1 and 100 from the user: Fizz Buzz
+        function FizzBuzz() {
+            var text = document.getElementById("Fizz Buzz").innerHTML;
+            document.getElementById("Fizz Buzz").innerHTML = Date();
         }
 
+        for (let i = 1; i <= 100; i++) {
+            let output = "";
+            if (i % 15 == 0) (output += "FizzBuzz");
+            else if (i % 3 == 0) (output += "Fizz");
+            else if (i % 5 == 0) (output += "Buzz");
+            else console.log(i);
 
-    </script>
+</script>
     </code></pre>
 
 </body>
