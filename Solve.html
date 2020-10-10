@@ -80,8 +80,48 @@
 
     <hr />
     <!-- Solve Page Content -->
+    Multiple of:
+    Multiple of:
+
+    Start buzzing:
+    End buzzing:
+
+
+    <!-- Main Content Starts -->
+    <section class="container-fluid main-container container-home p-0 revealator-slideup revealator-once revealator-delay1">
+        <div class="color-block d-none d-lg-block"></div>
+        <div class="row home-details-container align-items-center"></div>
+        <div class="col-lg-4 bg position-fixed d-none d-lg-block"> </div>
+        <div class="col-12 col-lg-8 offset-lg-4 home-details text-left text-sm-center text-lg-left">
+            <div>
+                <img src="" title="https://www.deviantart.com/ragnaruz" class="img-fluid main-img-mobile d-none d-sm-block d-lg-none" alt="my picture" />
+                <h6 class="text-uppercase open-sans-font mb-0 d-block d-sm-none d-lg-block">Mini Project</h6>
+                <h1 class="text-uppercase poppins-font"><span>Fizz </span>Buzz</h1>
+                <p class="open-sans-font text-dark h4"> <span class="h4" id="statusBox"></span></p>
+                <p class="open-sans-font text-dark h4"> <span id="printBox"></span></p>
+                <div class="row">
+                    <input type="number" step="1" id="minInput" value="1" />
+                    <input type="number" step="1" id="maxInput" value="100" />
+                </div>
+                <div class="row pb-2">
+                    <input type="number" step="1" id="fizzInput" value="5" />
+                    <input type="number" step="1" id="buzzInput" value="7" />
+                </div>
+                <div class="row text-center">
+                </div>
+                <div class="row text-center offset-1">
+                    <button class="btn btn-danger" id="button">Carbonate Range</button>
+                </div>
+
+
+            </div>
+        </div>
+
+    </section>
+
+
     <!--Exercise 3-->
-    <div class="col-lg-12 text-center">
+    <!-- <div class="col-lg-12 text-center">
         <h2 class="mt-5">Exercise 3</h2>
         <p class="lead">Write a program that accepts two numbers between 1 and 100 from the user: Fizz Buzz</p>
         <input type="number" id="FizzBuzz" />
@@ -90,8 +130,9 @@
     </div>
     <hr />
 
-    <!-- Fizz Buzz --><!--Exercise 3-->
-    <div class="col-lg-12 text-center">
+    <!-- Fizz Buzz -->
+    <!--Exercise 3-->
+    <!--  <div class="col-lg-12 text-center">
         <div class="row">
             <div class="col">
                 <input id="txtFizzBuzzIn1" />
@@ -112,9 +153,7 @@
             <p id="pFizzBuzzOut"></p>
         </div>
     </div>
-
-
-
+    -->
     </div>
     <!-- Bootstrap core JavaScript -->
     <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -123,25 +162,83 @@
     <!-- Prism -->
     <script src="prism.js"></script>
 
-    <!-- Prism -->
-    <pre><code>
-    <script>
 
-        //3. Write a program that accepts two numbers between 1 and 100 from the user: Fizz Buzz
-        function FizzBuzz() {
-            var text = document.getElementById("Fizz Buzz").innerHTML;
-            document.getElementById("Fizz Buzz").innerHTML = Date();
+    <!-- Fizz Buzz JavaScript  JavaScript JavaScript JavaScript JavaScript JavaScript JavaScript JavaScript JavaScript JavaScript-->
+    <script>
+        //this is the start of function fizzBuzzA where we use if and else if statements.
+        function fizzBuzzA() {
+
+            //the variables inputNumA1 and inputNumA2 represent the two input boxes the user will input the multiples of.
+            let inputNumA1 = parseInt(document.getElementById("userNumA1").value);
+            let inputNumA2 = parseInt(document.getElementById("userNumA2").value);
+
+            //the variables rangeLowA and rangeHighA represent the two input boxes the user will input the lowest and highest numbers that will be considered for Fizz and/or Buzz.
+            let rangeLowA = parseInt(document.getElementById("lowA").value);
+            let rangeHighA = parseInt(document.getElementById("highA").value);
+
+            //the variable returnValueA is going to be used to return the result of fizzBuzzA later on in the code. For now, we are just calling it as an empty string, it will be defined later on.
+            let returnValueA = "";
+
+            //if the input of variable i (which is = rangeLowA) is less then the input of rangeHighA, add 1 to i and check again until it is = rangeHighA.
+            for (let i = rangeLowA; i <= rangeHighA; i++) {
+
+                //if i is a multiple of userNumA1 and userNumA2, print FizzBuzz.
+                if (i % inputNumA1 == 0 && i % inputNumA2 == 0) { returnValueA += "FizzBuzz " }
+
+                //else if it isn't a multiple of userNumA1 and userNumA2, but is a multiple of userNumA1, print Fizz.
+                else if (i % inputNumA1 == 0) { returnValueA += "Fizz " }
+
+                //else if it isn't a multiple of userNumA1 and userNumA2, but is a multiple of userNumA2, print Buzz.
+                else if (i % inputNumA2 == 0) { returnValueA += "Buzz " }
+
+                //else print i
+                else { returnValueA += i + " " }
+            }
+
+            document.getElementById("returnValueA").innerHTML = returnValueA;
+
         }
 
-        for (let i = 1; i <= 100; i++) {
-            let output = "";
-            if (i % 15 == 0) (output += "FizzBuzz");
-            else if (i % 3 == 0) (output += "Fizz");
-            else if (i % 5 == 0) (output += "Buzz");
-            else console.log(i);
 
-</script>
-    </code></pre>
+        oR
+
+        document.getElementById("button").addEventListener('click', () => {
+            let minInput = parseInt(document.getElementById("minInput").value);
+            let maxInput = parseInt(document.getElementById("maxInput").value);
+            let fizzInput = parseInt(document.getElementById("fizzInput").value);
+            let buzzInput = parseInt(document.getElementById("buzzInput").value);
+
+            let arrayModified = modifiedData(minInput, maxInput, fizzInput, buzzInput);
+
+            document.getElementById('printBox').innerHTML = arrayModified;
+        })
+
+        function modifiedData(minInput, maxInput, fizzInput, buzzInput) {
+            var arrayModified = "";
+            for (let i = minInput; i <= maxInput; i++) {
+                let fizzRemainder = i % fizzInput;
+                let buzzRemainder = i % buzzInput;
+
+                if (fizzRemainder == 0 && buzzRemainder == 0) {
+                    arrayModified += "FIZZBUZZ! ";
+                } else if (fizzRemainder == 0) {
+                    arrayModified += "fizz ";
+                } else if (buzzRemainder == 0) {
+                    arrayModified += "buzz ";
+                } else {
+                    arrayModified += i + ' ';
+                }
+
+            }
+
+
+            return arrayModified;
+        }
+
+
+
+    </script>
+
 
 </body>
 
