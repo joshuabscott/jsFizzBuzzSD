@@ -16,13 +16,23 @@
     <link rel="shortcut icon" href="jsImages/favicon.ico" />
     <!-- Prism -->
     <link href="themes/prism.css" rel="stylesheet" />
+
 </head>
 
-<!-- FizzBuzz Background Image -->
+<!-- Fizz Buzz Background Image -->
 <style>
     body {
-        background-image: url('jsImages/jsFizzBuzz.png');
+        background-image: url('jsImages/jsTacoCat.png');
         background-color: #cccccc;
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 60px; /* Set the fixed height of the footer here */
+        line-height: 60px; /* Vertically center the text there */
+        background-color: #f5f5f5;
     }
 </style>
 
@@ -57,29 +67,31 @@
                     <li class="nav-item">
                         <a class="nav-link" href="https://www.joshscott.xyz/" target="_blank" href="#">Blog</a>
                     </li>
-
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Page Content -->
+    <!-- Taco Cat -->
     <div class="container">
+
         <div class="row">
             <div class="col-lg-12 text-center bg-light text-dark">
                 <h1 class="mt-5">Fizz Buzz</h1>
                 <p class="lead">
-                    Fizz buzz (often spelled FizzBuzz in this context) has been used as an interview screening device for computer programmers.[2][3]
-                    Writing a program to output the first 100 FizzBuzz numbers is a trivial problem for any would-be computer programmer,
-                    so interviewers can easily filter out those with insufficient programming ability.
+                    A palindrome is a word, number, phrase, or other sequence of characters which reads the same backward as forward, such as madam, racecar.
+                    There are also numeric palindromes, including date/time stamps using short digits 11/11/11 11:11 and long digits 02/02/2020
                 </p>
-
             </div>
 
-            <!--Challenge Description-->
+        </div>
+
+        <hr />
+
+        <!-- Challenge DESCRIPTION -->
+        <div class="row ">
             <div class="col-lg-12 text-center bg-light text-dark">
                 <h2 class="mt-5">Challenge Description</h2>
-
                 <ul class="list-unstyled">
                     <li>
                         Write a program that prints the numbers from 1
@@ -90,95 +102,77 @@
                         For numbers which are multiples of both three
                         and five print “FizzBuzz”.
                     </li>
-                    <li>You should include information about what the code does</li>
+                    <li>mom, dad, racecar, ufo tofu</li>
                 </ul>
-
-                <h2 class="mt-5">Background</h2>
-                <p class="lead">
-                    The Fizzbuzz coding challenge was invented in 2007 by Imran Ghoryin in order to assess
-                    developer competence.
-                    Since its conception the Fizzbuzz challenge has been used by Facebook and Microsoft as
-                    interview tools and has also been taught at Stanford, Berkley, Caltech and countless other
-                    universities.
-
-                    The FizzBuzz Challenge has the coder write a program that prints the numbers from 1 to 100, but for multiples of 3 it will print "Fizz" and for multiples of 5 it will print "Buzz". 
-                    For multiples of both 3 and 5, it will print "FizzBuzz".
-
-                    Below you will see 4 different collapsible menus. Each has the same input and output but the code used to write each program is different. 
-                    You will see a program for an "Else If Loop", "Switch Statement", "Ternary Operator" and "Arrays". Click the + or - signs to open/close the buttons and test the programs out.
-
-                </p>
-
             </div>
 
-            <!-- Fizz Buzz -->
+        </div>
+
+        <hr />
+
+        <!--BACKGROUND-->
+        <div class="col-lg-12 text-center bg-light text-dark">
+            <h2 class="mt-5">Background</h2>
+            <p class="lead">
+                The Fizzbuzz coding challenge was invented in 2007 by Imran Ghoryin in order to assess
+                developer competence.
+                Since its conception the Fizzbuzz challenge has been used by Facebook and Microsoft as
+                interview tools and has also been taught at Stanford, Berkley, Caltech and countless other
+                universities.
+            </p>
+
+        </div>
+
+        <hr />
+
+        <!-- Index Page Content -->
+        <section>
+
+            <!-- Technologies Used & Extra Credit-->
+            <div class="container ">
+
+                <div class="row">
+                    <div class="col-6 text-center bg-light text-dark">
+                        <h2 class="col-6">Technologies Used</h2>
+                        <p class="lead">
+                            HTML, JavaScript, jQuery, CSS, Bootstrap
+                        </p>
+
+                    </div>
+
+                    <div class="col-6 text-center bg-light text-dark">
+                        <h2 class="col-6">Extra Credit</h2>
+                        <p class="lead">
+                            Modify the program to allow a user to enter
+                            two integers (instead of hard coding 3 and
+                            5) and print the appropriate result based on
+                            multiples of their input.
+                        </p>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <hr />
+
+        <!-- Footer -->
+        <div id="footer">
             <div class="col-lg-12 text-center bg-light text-dark">
+                <!-- Copyright -->
+                <p>Josh Scott.xyz All rights reserved. Design: <a href="http://joshscott.xyz">Josh Scott</a></p>
 
-                <div class="row">
-                    <div class="col">
-                        <
-                    </div>
-                    <div class="col">
-                        <
-                    </div>
-                    <div class="col">
-                        <
-                    </div>
-                </div>
-                <div class="row">
-                    <
-                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Index Page Content -->
-    <section>
-
-        <!-- Fizz Buzz -->
-        <div class="container">
-
-            <div class="row bg-light text-dark">
-                <div class="col-6 text-center">
-                    <h2 class="col-6">Technologies Used</h2>
-                    <p class="lead">
-                        HTML, JavaScript, jQuery, CSS, Bootstrap
-                    </p>
-
-                </div>
-
-                <div class="col-6 text-center">
-                    <h2 class="col-6">Extra Credit</h2>
-                    <p class="lead">
-                        Modify the program to allow a user to enter
-                        two integers (instead of hard coding 3 and
-                        5) and print the appropriate result based on
-                        multiples of their input..
-                    </p>
-
-                </div>
-            </div>
-
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-
-            </div>
-
-            <button type="button" class="btn btn-outline-primary">Primary</button>
-
-        </div>
-    </section>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <!-- Prism -->
-    <script src="prism.js"></script>
-
+        <!-- Bootstrap core JavaScript -->
+        <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <!-- Prism -->
+        <script src="prism.js"></script>
 
 </body>
 
