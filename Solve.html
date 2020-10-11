@@ -80,28 +80,36 @@
         </div>
 
         <hr />
+        <!-- Fizz Buzz Content -->
         <section class="container-fluid main-container container-home p-0 revealator-slideup revealator-once revealator-delay1">
             <div class="color-block d-none d-lg-block"></div>
-            <div class="row home-details-container align-items-center">
-                <div class="col-lg-4 bg position-fixed d-none d-lg-block"></div>
-                <div class="col-12 col-lg-8 offset-lg-4 home-details text-left text-sm-center text-lg-left">
-                    <div>
-                        <img src="Content/img/tacocat.png" title="https://www.deviantart.com/ragnaruz" class="img-fluid main-img-mobile d-none d-sm-block d-lg-none" alt="my picture" />
-                        <h6 class="text-uppercase open-sans-font mb-0 d-block d-sm-none d-lg-block">Mini Project</h6>
-                        <h1 class="text-uppercase poppins-font"><span>TACO </span>CAT</h1>
-                        <p class="open-sans-font text-dark h4"> <span class="h4" id="statusBox"></span></p>
-                        <p class="open-sans-font text-dark h4"> <span id="printBox"></span></p>
-                        <input type="text" pattern="[A-Za-z]{3}" id="inputBox" value="red" />
+            <div class="row home-details-container align-items-center"></div>
+            <div class="col-lg-4 bg position-fixed d-none d-lg-block"> </div>
+            <div class="col-12 col-lg-8 offset-lg-4 home-details text-left text-sm-center text-lg-left">
+                <div>
+                    <img src="" title="https://www.deviantart.com/ragnaruz" class="img-fluid main-img-mobile d-none d-sm-block d-lg-none" alt="my picture" />
+                    <h6 class="text-uppercase open-sans-font mb-0 d-block d-sm-none d-lg-block">Mini Project</h6>
+                    <h1 class="text-uppercase poppins-font"><span>Fizz </span>Buzz</h1>
+                    <p class="open-sans-font text-dark h4"> <span class="h4" id="statusBox"></span></p>
+                    <p class="open-sans-font text-dark h4"> <span id="printBox"></span></p>
+                    <div class="row">
+                        <input type="number" step="1" id="minInput" value="1" />
+                        <input type="number" step="1" id="maxInput" value="100" />
+                    </div>
+                    <div class="row pb-2">
+                        <input type="number" step="1" id="fizzInput" value="5" />
+                        <input type="number" step="1" id="buzzInput" value="7" />
                     </div>
                     <div class="row text-center">
                     </div>
-                    <div class="row text-center">
-                        <button class="btn btn-warning" id="button">DO MAGIC</button>
+                    <div class="row text-center offset-1">
+                        <button class="btn btn-danger" id="button">Do Fizz Buzz</button>
                     </div>
 
 
                 </div>
             </div>
+
         </section>
 
         <!-- Footer -->
@@ -122,7 +130,37 @@
 
         <!-- Taco CAt JavaScript -->
         <script>
+            document.getElementById("button").addEventListener('click', () => {
+                let minInput = parseInt(document.getElementById("minInput").value);
+                let maxInput = parseInt(document.getElementById("maxInput").value);
+                let fizzInput = parseInt(document.getElementById("fizzInput").value);
+                let buzzInput = parseInt(document.getElementById("buzzInput").value);
 
+                let arrayModified = modifiedData(minInput, maxInput, fizzInput, buzzInput);
+
+                document.getElementById('printBox').innerHTML = arrayModified;
+            })
+
+            function modifiedData(minInput, maxInput, fizzInput, buzzInput) {
+                var arrayModified = "";
+                for (let i = minInput; i <= maxInput; i++) {
+                    let fizzRemainder = i % fizzInput;
+                    let buzzRemainder = i % buzzInput;
+
+                    if (fizzRemainder == 0 && buzzRemainder == 0) {
+                        arrayModified += "FIZZBUZZ! ";
+                    } else if (fizzRemainder == 0) {
+                        arrayModified += "fizz ";
+                    } else if (buzzRemainder == 0) {
+                        arrayModified += "buzz ";
+                    } else {
+                        arrayModified += i + ' ';
+                    }
+
+                }
+
+                return arrayModified;
+            }
         </script>
 
     </div>
