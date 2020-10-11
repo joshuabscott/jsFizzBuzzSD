@@ -14,8 +14,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <!-- Favicon -->
     <link rel="shortcut icon" href="jsImages/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <!-- Prism -->
-    <link href="themes/prism.css" rel="stylesheet" />
+    <link href="prism.css" rel="stylesheet" />
 </head>
 
 
@@ -24,6 +28,14 @@
     body {
         background-image: url('jsImages/jsFizzBuzz.png');
         background-color: #cccccc;
+    }
+    .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 60px; /* Set the fixed height of the footer here */
+        line-height: 60px; /* Vertically center the text there */
+        background-color: #f5f5f5;
     }
 </style>
 
@@ -67,13 +79,19 @@
     <!-- Page Content -->
     <div class="container">
 
-        <!-- Taco Cat Text-->
+        <!-- Fizz Buzz Text-->
         <div class="row ">
             <div class="col-lg-12 text-center bg-light text-dark">
                 <h1 class="mt-5">Fizz Buzz</h1>
-                <p class="lead">Challenge Taco Cat This page will display your JS exercise</p>
+                <p class="lead">Challenge Fizz Buzz This page will display your Javascript exercise</p>
                 <ul class="list-unstyled">
-                    <li>Write a program that allows a user to enter in a word or phrase and then prints out the reverse of what was entered. Example: the user enters “developer” the output is “repoleved”.</li>
+                    <li>
+                        Write a program that prints the numbers from 1
+                        to 100.
+                        But for multiples of three print “Fizz” instead of
+                        the number and for the multiples of five print
+                        “Buzz”..
+                    </li>
 
                 </ul>
             </div>
@@ -81,89 +99,91 @@
 
         <hr />
         <!-- Fizz Buzz Content -->
-        <section class="container-fluid main-container container-home p-0 revealator-slideup revealator-once revealator-delay1">
-            <div class="color-block d-none d-lg-block"></div>
-            <div class="row home-details-container align-items-center"></div>
-            <div class="col-lg-4 bg position-fixed d-none d-lg-block"> </div>
-            <div class="col-12 col-lg-8 offset-lg-4 home-details text-left text-sm-center text-lg-left">
-                <div>
-                    <img src="" title="https://www.deviantart.com/ragnaruz" class="img-fluid main-img-mobile d-none d-sm-block d-lg-none" alt="my picture" />
-                    <h6 class="text-uppercase open-sans-font mb-0 d-block d-sm-none d-lg-block">Mini Project</h6>
-                    <h1 class="text-uppercase poppins-font"><span>Fizz </span>Buzz</h1>
-                    <p class="open-sans-font text-dark h4"> <span class="h4" id="statusBox"></span></p>
-                    <p class="open-sans-font text-dark h4"> <span id="printBox"></span></p>
-                    <div class="row">
-                        <input type="number" step="1" id="minInput" value="1" />
-                        <input type="number" step="1" id="maxInput" value="100" />
-                    </div>
-                    <div class="row pb-2">
-                        <input type="number" step="1" id="fizzInput" value="5" />
-                        <input type="number" step="1" id="buzzInput" value="7" />
-                    </div>
-                    <div class="row text-center">
-                    </div>
-                    <div class="row text-center offset-1">
-                        <button class="btn btn-danger" id="button">Do Fizz Buzz</button>
-                    </div>
+        <div class="col-lg-12 text-center bg-light text-dark">
+            <section class="container-fluid main-container container-home p-0 revealator-slideup revealator-once revealator-delay1">
+                <div class="color-block d-none d-lg-block"></div>
+                <div class="row home-details-container align-items-center"></div>
+                <div class="col-lg-4 bg position-fixed d-none d-lg-block"> </div>
+                <div class="col-12 col-lg-8 offset-lg-4 home-details text-left text-sm-center text-lg-left">
+                    <div>
 
+                        
+                        <p class="open-sans-font text-dark h4"> <span class="h4" id="statusBox"></span></p>
+                        <p class="open-sans-font text-dark h4"> <span id="printBox"></span></p>
+                        <div class="row">
+                            <h5 class="mt-5">Fizz Buzz Range</h5>
+                            <input type="number" step="1" id="minInput" value="1" />
+                            <input type="number" step="1" id="maxInput" value="100" />
+                        </div>
+                        <div class="row pb-2">
+                            <h5 class="mt-5">Fizz Buzz Variables</h5>
+                            <input type="number" step="1" id="fizzInput" value="3" />
+                            <input type="number" step="1" id="buzzInput" value="5" />
+                        </div>
+                        <div class="row text-center">
+                        </div>
+                        <div class="row text-center offset-1">
+                            <button class="btn btn-danger" id="button">Calculate</button>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </section>
+        </div>
+            <!-- Footer -->
+            <div id="footer">
+                <div class="col-lg-12 text-center bg-light text-dark">
+                    <!-- Copyright -->
+                    <p>Josh Scott.xyz All rights reserved. Design: <a href="http://joshscott.xyz">Josh Scott</a></p>
 
                 </div>
             </div>
 
-        </section>
+            <!-- Bootstrap core JavaScript -->
+            <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+            <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+            <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+            <!-- Prism -->
+            <script src="prism.js"></script>
 
-        <!-- Footer -->
-        <div id="footer">
-            <div class="col-lg-12 text-center bg-light text-dark">
-                <!-- Copyright -->
-                <p>Josh Scott.xyz All rights reserved. Design: <a href="http://joshscott.xyz">Josh Scott</a></p>
+            <!-- Taco CAt JavaScript -->
+            <script>
+                document.getElementById("button").addEventListener('click', () => {
+                    let minInput = parseInt(document.getElementById("minInput").value);
+                    let maxInput = parseInt(document.getElementById("maxInput").value);
+                    let fizzInput = parseInt(document.getElementById("fizzInput").value);
+                    let buzzInput = parseInt(document.getElementById("buzzInput").value);
 
-            </div>
-        </div>
+                    let arrayModified = modifiedData(minInput, maxInput, fizzInput, buzzInput);
 
-        <!-- Bootstrap core JavaScript -->
-        <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-        <!-- Prism -->
-        <script src="prism.js"></script>
+                    document.getElementById('printBox').innerHTML = arrayModified;
+                })
 
-        <!-- Taco CAt JavaScript -->
-        <script>
-            document.getElementById("button").addEventListener('click', () => {
-                let minInput = parseInt(document.getElementById("minInput").value);
-                let maxInput = parseInt(document.getElementById("maxInput").value);
-                let fizzInput = parseInt(document.getElementById("fizzInput").value);
-                let buzzInput = parseInt(document.getElementById("buzzInput").value);
+                function modifiedData(minInput, maxInput, fizzInput, buzzInput) {
+                    var arrayModified = "";
+                    for (let i = minInput; i <= maxInput; i++) {
+                        let fizzRemainder = i % fizzInput;
+                        let buzzRemainder = i % buzzInput;
 
-                let arrayModified = modifiedData(minInput, maxInput, fizzInput, buzzInput);
+                        if (fizzRemainder == 0 && buzzRemainder == 0) {
+                            arrayModified += "FIZZBUZZ! ";
+                        } else if (fizzRemainder == 0) {
+                            arrayModified += "fizz ";
+                        } else if (buzzRemainder == 0) {
+                            arrayModified += "buzz ";
+                        } else {
+                            arrayModified += i + ' ';
+                        }
 
-                document.getElementById('printBox').innerHTML = arrayModified;
-            })
-
-            function modifiedData(minInput, maxInput, fizzInput, buzzInput) {
-                var arrayModified = "";
-                for (let i = minInput; i <= maxInput; i++) {
-                    let fizzRemainder = i % fizzInput;
-                    let buzzRemainder = i % buzzInput;
-
-                    if (fizzRemainder == 0 && buzzRemainder == 0) {
-                        arrayModified += "FIZZBUZZ! ";
-                    } else if (fizzRemainder == 0) {
-                        arrayModified += "fizz ";
-                    } else if (buzzRemainder == 0) {
-                        arrayModified += "buzz ";
-                    } else {
-                        arrayModified += i + ' ';
                     }
 
+                    return arrayModified;
                 }
+            </script>
 
-                return arrayModified;
-            }
-        </script>
-
-    </div>
+        </div>
 
 </body>
 
